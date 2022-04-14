@@ -1,4 +1,49 @@
-body 
-{
-    background-color: cyan;
+*, *::before, *::after {
+box-sizing: border-box;
+font-family: sans-serif;
+font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: salmon;
+}
+
+.calculator-grid {
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px, auto) repeat(4,100px);
+}
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: gainsboro;
+}
+.calculator-grid > button:hover {
+background-color: whitesmoke;
+}
+
+.output{
+    grid-column: 1/-1;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand{
+color: white;
+}
+.output .current-operand{
+color: white;
 }
