@@ -7,8 +7,24 @@ font-weight: normal;
 body {
     padding: 0;
     margin: 0;
-    background: salmon;
+	background: linear-gradient(-40deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 600% 600%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
 }
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 .calculator-grid {
     display:grid;
