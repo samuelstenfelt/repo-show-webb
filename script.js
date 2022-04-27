@@ -1,1 +1,1 @@
-alert("Working");
+log("Working");
