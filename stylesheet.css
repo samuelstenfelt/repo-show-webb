@@ -1,16 +1,69 @@
-*, *::before, *::after {
-box-sizing: border-box;
-font-family: sans-serif;
-font-weight: normal;
-}
-
 body {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 	background: linear-gradient(-40deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 600% 600%;
 	animation: gradient 15s ease infinite;
 	height: 100vh;
+  background-color: white;
+}
+
+.backgroundbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.backgroundbtn:hover, .backgroundbtn:focus {
+  background-color: #3e8e41;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url('searchicon.png');
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {outline: 3px solid #ddd;}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdownContent a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+*, *::before, *::after {
+box-sizing: border-box;
+font-family: sans-serif;
+font-weight: normal;
 }
 
 @keyframes gradient {
