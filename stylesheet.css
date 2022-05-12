@@ -1,6 +1,11 @@
-body 
-{
-    background-color: white;
+body {
+  padding: 0;
+  margin: 0;
+	background: linear-gradient(-40deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 600% 600%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+  background-color: white;
 }
 
 .backgroundbtn {
@@ -54,3 +59,60 @@ body
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+
+*, *::before, *::after {
+box-sizing: border-box;
+font-family: sans-serif;
+font-weight: normal;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+.calculator-grid {
+    display:grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows: minmax(120px, auto) repeat(4,100px);
+}
+.calculator-grid > button{
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: gainsboro;
+}
+.calculator-grid > button:hover {
+background-color: whitesmoke;
+}
+
+.output{
+    grid-column: 1/-1;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand{
+color: white;
+}
+.output .current-operand{
+color: white;
+}
